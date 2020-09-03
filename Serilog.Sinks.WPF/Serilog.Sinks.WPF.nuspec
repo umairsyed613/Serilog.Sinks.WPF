@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Serilog.Sinks.WPF</title>
+    <authors>UmairSyed (@umairsyed613)</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/umairsyed613/Serilog.Sinks.WPF</projectUrl>
+	<repository type="git" url="https://github.com/umairsyed613/Serilog.Sinks.WPF" />
+    <description>Writes Serilog events to WPF TextBox control from anywhere in your application.</description>
+    <releaseNotes>Writes Serilog events to WPF TextBox control</releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>Serilog WPF Serilog.Sinks Serilog.WPF Sinks WindowsPresentationFoundation</tags>
+  </metadata>
+</package>
