@@ -36,4 +36,4 @@ Log.Logger = new LoggerConfiguration()
 
 ### Sample Code
 
-Find the sample running application [here](https://github.com/umairsyed613/Serilog.Sinks.WPF/SampleApplication/)
+Find the sample running application [here](https://github.com/umairsyed613/Serilog.Sinks.WPF/tree/master/SampleApplication/)
