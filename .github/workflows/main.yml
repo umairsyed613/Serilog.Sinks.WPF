@@ -18,10 +18,10 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2
      
     - name: Restore NuGet Packages
-      run: nuget restore /Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
+      run: nuget restore Serilog.Sinks.WPF\Serilog.Sinks.WPF.sln
  
-    - name: Build and Publish Web App
-      run: msbuild /Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+    - name: Build and Publish Package
+      run: msbuild Serilog.Sinks.WPF\Serilog.Sinks.WPF.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
  
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
