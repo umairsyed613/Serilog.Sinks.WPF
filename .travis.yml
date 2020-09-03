@@ -1,0 +1,2 @@
+language: csharp
+solution: Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
