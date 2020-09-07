@@ -1,6 +1,6 @@
 # Serilog.Sinks.WPF
 
-[![NuGet version](https://badge.fury.io/nu/Serilog.Sinks.WPF.png)](https://badge.fury.io/nu/Serilog.Sinks.WPF) ![Build Status](https://travis-ci.org/umairsyed613/Serilog.Sinks.WPF.svg?branch=master) [![Nuget](https://img.shields.io/nuget/dt/Serilog.Sinks.WPF)](https://www.nuget.org/packages/Serilog.Sinks.WPF)
+[![NuGet version](https://badge.fury.io/nu/Serilog.Sinks.WPF.png)](https://badge.fury.io/nu/Serilog.Sinks.WPF) ![Build and Publish](https://github.com/umairsyed613/Serilog.Sinks.WPF/workflows/Build%20and%20Publish/badge.svg) [![Nuget](https://img.shields.io/nuget/dt/Serilog.Sinks.WPF)](https://www.nuget.org/packages/Serilog.Sinks.WPF)
 
 Writes [Serilog](https://serilog.net) events to WPF TextBox control from anywhere in your application.
 
