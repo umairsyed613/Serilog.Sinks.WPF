@@ -1,0 +1,21 @@
+name: Build and Publish
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: Serilog.Sinks.WPF.sln
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .Net Framework
+      uses: microsoft/setup-msbuild@v1.0.1
+    - name: Install dependencies
+      run: dotnet restore Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
+    - name: Build
+      run: dotnet build Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln --configuration Release --no-restore
