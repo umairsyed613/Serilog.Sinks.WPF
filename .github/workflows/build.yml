@@ -15,7 +15,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup .Net Framework
       uses: microsoft/setup-msbuild@v1.0.1
-    - name: Install dependencies
-      run: dotnet restore Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
     - name: Build
-      run: dotnet build Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln --configuration Release --no-restore
+      run: msbuild Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln --configuration Release
