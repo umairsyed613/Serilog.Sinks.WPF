@@ -16,4 +16,4 @@ jobs:
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build
-      run: msbuild Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln --configuration Release
+      run: msbuild Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln /t:Build /p:Configuration=Release /p:TargetFramework=v4.0
