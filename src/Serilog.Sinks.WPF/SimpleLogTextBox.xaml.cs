@@ -14,6 +14,7 @@ namespace Serilog.Sinks.WPF
 
         public bool IsReadyOnly { get; set; } = false;
 
+
         public SimpleLogTextBox()
         {
             InitializeComponent();
@@ -25,6 +26,10 @@ namespace Serilog.Sinks.WPF
             {
                 LogTextBox.VerticalScrollBarVisibility = ScrollBarVisibility;
                 LogTextBox.IsReadOnly = IsReadyOnly;
+                LogTextBox.FontFamily = FontFamily;
+                LogTextBox.FontSize = FontSize;
+                LogTextBox.FontStyle = FontStyle;
+                LogTextBox.FontWeight = FontWeight;
             }
             else
             {
@@ -34,6 +39,10 @@ namespace Serilog.Sinks.WPF
                             {
                                 LogTextBox.VerticalScrollBarVisibility = ScrollBarVisibility;
                                 LogTextBox.IsReadOnly = IsReadyOnly;
+                                LogTextBox.FontFamily = FontFamily;
+                                LogTextBox.FontSize = FontSize;
+                                LogTextBox.FontStyle = FontStyle;
+                                LogTextBox.FontWeight = FontWeight;
                             }));
             }
 

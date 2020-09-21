@@ -31,16 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>serilog-sink-nuget.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
-   <PropertyGroup>
+  <PropertyGroup>
     <PackageIcon>serilog-sink-nuget.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
-      <HintPath>packages\Serilog.2.9.0\lib\net46\Serilog.dll</HintPath>
+      <HintPath>packages\Serilog.2.10.0\lib\net46\Serilog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,9 +65,6 @@
     <Compile Include="WindFromsSinkExtensions.cs" />
     <Compile Include="WinFormsSinkInternal.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <Page Include="JsonTextBoxSink.xaml">
@@ -79,8 +77,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\serilog-sink-nuget.png" Pack="true" PackagePath="\" />
     <Content Include="serilog-sink-nuget.ico" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
