@@ -16,8 +16,8 @@ jobs:
     - name: Setup Nuget.exe
       uses: warrenbuckley/Setup-Nuget@v1
     - name: Restore packages
-      run: nuget restore Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
+      run: nuget restore src/Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln
     - name: Setup MSBuild.exe
       uses: warrenbuckley/Setup-MSBuild@v1
     - name: Build with MSBuild
-      run: msbuild  Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln -p:Configuration=Release
+      run: msbuild  src/Serilog.Sinks.WPF/Serilog.Sinks.WPF.sln -p:Configuration=Release
