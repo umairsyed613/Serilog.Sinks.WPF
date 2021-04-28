@@ -15,7 +15,7 @@ namespace SampleApplication
             InitializeComponent();
 
             Log.Logger = new LoggerConfiguration()
-                        .WriteToSimpleTextBox()
+                        .WriteToSimpleAndRichTextBox()
                         .CreateLogger();
 
             Log.Information("Logger has been created");

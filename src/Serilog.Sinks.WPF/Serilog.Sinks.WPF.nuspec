@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/umairsyed613/Serilog.Sinks.WPF</projectUrl>
 	<repository type="git" url="https://github.com/umairsyed613/Serilog.Sinks.WPF" />
     <description>Writes Serilog events to WPF TextBox control from anywhere in your application.</description>
-    <releaseNotes>Font can be configured. packages updated to latest</releaseNotes>
+    <releaseNotes>Read Docs at https://github.com/umairsyed613/Serilog.Sinks.WPF</releaseNotes>
     <copyright>$copyright$</copyright>
     <tags>Serilog WPF Serilog.Sinks Serilog.WPF Sinks WindowsPresentationFoundation</tags>
   </metadata>

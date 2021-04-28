@@ -12,7 +12,7 @@ Install the [Serilog.Sinks.WPF](https://www.nuget.org/packages/Serilog.Sinks.WPF
 Install-Package Serilog.Sinks.WPF
 ```
 
-To configure the sink in C# code, call `WriteToSimpleTextBox()` or `WriteToJsonTextBox()` during logger configuration:
+To configure the sink in C# code, call `WriteToSimpleAndRichTextBox()` or `WriteToJsonTextBox()` during logger configuration:
 
 ##### Simple Text Formatted Log
 
@@ -20,7 +20,15 @@ SimpleLogTextBox can be used from visual studio toolbox once the package is adde
 
 ```csharp
 Log.Logger = new LoggerConfiguration()
-                        .WriteToSimpleTextBox()
+                        .WriteToSimpleAndRichTextBox()
+                        .CreateLogger();
+```
+
+SimpleLogTextBox or RichTextBoxLogControl with custom **MessageTemplate**. WriteToSimpleAndRichTextBox accepts [ITextFormatter](https://github.com/serilog/serilog/blob/dev/src/Serilog/Formatting/ITextFormatter.cs)
+
+```csharp
+Log.Logger = new LoggerConfiguration()
+                        .WriteToSimpleAndRichTextBox(new MessageTemplateTextFormatter("{Timestamp} [{Level}] {Message} {Exception}"))
                         .CreateLogger();
 ```
 
