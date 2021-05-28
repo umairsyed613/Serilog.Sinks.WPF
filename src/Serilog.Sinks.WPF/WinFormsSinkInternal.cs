@@ -14,12 +14,9 @@ namespace Serilog.Sinks.WPF
 
         public event LogHandler OnLogReceived;
 
-        private ITextFormatter _textFormatter;
+        private readonly ITextFormatter _textFormatter;
 
-        public WinFormsSinkInternal(ITextFormatter textFormatter)
-        {
-            _textFormatter = textFormatter ?? throw new ArgumentNullException(nameof(textFormatter));
-        }
+        public WinFormsSinkInternal(ITextFormatter textFormatter) => _textFormatter = textFormatter ?? throw new ArgumentNullException(nameof(textFormatter));
 
         public void Emit(LogEvent logEvent)
         {

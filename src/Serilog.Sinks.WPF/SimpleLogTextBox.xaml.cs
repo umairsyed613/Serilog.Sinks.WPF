@@ -36,14 +36,14 @@ namespace Serilog.Sinks.WPF
                 Dispatcher.BeginInvoke(
                     new Action(
                         delegate
-                            {
-                                LogTextBox.VerticalScrollBarVisibility = ScrollBarVisibility;
-                                LogTextBox.IsReadOnly = IsReadyOnly;
-                                LogTextBox.FontFamily = FontFamily;
-                                LogTextBox.FontSize = FontSize;
-                                LogTextBox.FontStyle = FontStyle;
-                                LogTextBox.FontWeight = FontWeight;
-                            }));
+                        {
+                            LogTextBox.VerticalScrollBarVisibility = ScrollBarVisibility;
+                            LogTextBox.IsReadOnly = IsReadyOnly;
+                            LogTextBox.FontFamily = FontFamily;
+                            LogTextBox.FontSize = FontSize;
+                            LogTextBox.FontStyle = FontStyle;
+                            LogTextBox.FontWeight = FontWeight;
+                        }));
             }
 
             WindFormsSink.SimpleTextBoxSink.OnLogReceived += SimpleTextBoxSink_OnLogReceived;
@@ -62,11 +62,16 @@ namespace Serilog.Sinks.WPF
                     System.Windows.Threading.DispatcherPriority.Normal,
                     new Action(
                         delegate
-                            {
-                                LogTextBox.Text += str;
-                                LogTextBox.ScrollToEnd();
-                            }));
+                        {
+                            LogTextBox.Text += str;
+                            LogTextBox.ScrollToEnd();
+                        }));
             }
+        }
+
+        private void SimpleLogTextBox_OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            WindFormsSink.SimpleTextBoxSink.OnLogReceived -= SimpleTextBoxSink_OnLogReceived;
         }
     }
 }

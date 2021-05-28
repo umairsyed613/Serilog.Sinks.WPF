@@ -67,5 +67,10 @@ namespace Serilog.Sinks.WPF
                             }));
             }
         }
+
+        private void JsonTextBoxSink_OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            WindFormsSink.JsonTextBoxSink.OnLogReceived -= JsonTextBoxSink_OnLogReceived;
+        }
     }
 }
